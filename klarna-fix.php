@@ -3,6 +3,7 @@ add_shortcode('kshort','klarna_locale_switch');
 function klarna_locale_switch() {
 	$current_lang = apply_filters( 'wpml_current_language', null );
 	
+	// Replace the codes below with the appropriate WPML language codes / Klarna locale codes
 	$array = array(
 		"en" => "en-ES",
 		"enuk" => "en-GB",
@@ -14,6 +15,8 @@ function klarna_locale_switch() {
 		);
 	
 		global $product;
+	
+	// Replace the datakey attribute with your desired Klara shortode
 		$wooprice = $product->get_price() * 100;
 		ob_start(); ?>
 		<klarna-placement data-key="credit-promotion-badge"
